@@ -20,3 +20,12 @@ def generate_random_password(length, upper_length, lower_length, symbol_length, 
         
     password = ''.join(random.sample(chars, k=length))
     return password
+
+def main():
+    print("Welcome to the Password Generator!")
+    length, upper_length, lower_length, symbol_length, number_length = get_user_input()
+    password = generate_random_password(length, upper_length, lower_length, symbol_length, number_length)
+    print("Generated Password:", password)
+
+if __name__ == "__main__":
+    main()
